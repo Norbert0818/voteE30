@@ -1,5 +1,8 @@
 @import "tailwindcss";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +26,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+@media print {
+  @page {
+    margin: 0; /* Eltünteti a böngésző alapértelmezett fejléceit/lábléceit */
+  }
+  body {
+    margin: 1cm; /* Adunk egy kis margót a tartalomnak, hogy ne lógjon le a papírról */
+  }
 }
