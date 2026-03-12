@@ -49,7 +49,7 @@ export default async function QRCodesPage() {
           key={pageIndex} 
           className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-8 print:gap-4 print:w-[210mm] print:h-[297mm] print:break-after-page print:p-4 mb-16 print:mb-0"
         >
-          {chunk.map(car => {
+          {chunk.map((car: any) => { 
             const voteUrl = `${baseUrl}/vote/${car.startNumber}`;
             return (
               <QRCard key={car.id} car={car} voteUrl={voteUrl} />
