@@ -13,10 +13,10 @@ export default async function LeaderboardPage() {
     }
   });
 
-  const rankings = categories.map((category) => {
+  const rankings = categories.map((category: any) => {
     const carVoteCounts: Record<number, any> = {};
 
-    category.votes.forEach((vote) => {
+    category.votes.forEach((vote: any) => {
       const carId = vote.car.id;
       if (!carVoteCounts[carId]) {
         carVoteCounts[carId] = { ...vote.car, voteCount: 0 };
